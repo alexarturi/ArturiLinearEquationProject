@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdfa4636-820c-49f8-b0c8-819e0b065070" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArturiLinearEquationProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LinearEquation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LinearEquationRunner.java" afterDir="false" />
+    <list default="true" id="bdfa4636-820c-49f8-b0c8-819e0b065070" name="Changes" comment="10/18">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinearEquation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinearEquation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinearEquationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinearEquationRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +37,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/BT_3W2_28/IdeaProjects/ArturiLinearEquationProject",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
@@ -68,6 +64,14 @@
       <option name="presentableId" value="Default" />
       <updated>1666107088776</updated>
     </task>
+    <task id="LOCAL-00001" summary="10/18">
+      <created>1666110702179</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666110702179</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -80,5 +84,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="10/18" />
+    <option name="LAST_COMMIT_MESSAGE" value="10/18" />
   </component>
 </project>

@@ -19,6 +19,7 @@ public class LinearEquation {
     }
 
     public double yIntercept(){
+
         return y1-(slope()*x1);
     }
 
@@ -64,11 +65,45 @@ public class LinearEquation {
             yInt = "";
         }
 
-        return "y = " + slope+"x "+ yInt;
+        if (slope() == 0) {
+            if(yInt == ""){
+                return "y = 0";
+            } else {
+                if (yIntercept()*10%10 == 0){
+                    return "y = " + (int)(yIntercept());
+                } else {
+                    return "y = " + yIntercept();
+                }
+            }
+        } else {
+            return "y = " + slope + "x " + yInt;
+        }
     }
 
 
     public double roundedToHundredth(double toRound){
         return Math.round(toRound*100)/100.0;
+    }
+
+    public String lineInfo(){
+        String output = "";
+        output += "The two points are: (" + x1 + ", " + y1 + ") and (" + x2 + ", " + y2 + ")";
+        output += "\nThe equation of the line between these points is: " + equation();
+        output += "\nThe slope of this line is: " + slope();
+        output += "\nThe y-intercept of the line is: " + yIntercept();
+        output += "\nThe distance between the two points is: " + distance();
+        output += "\n";
+        return output;
+    }
+
+    public String coordinateForX(double xVal){
+        double slope;
+        double yVal;
+        String out = "";
+        out += "(" + xVal + ", ";
+        slope = slope();
+        yVal = (slope * xVal) + yIntercept();
+        out += roundedToHundredth(yVal) + ")";
+        return out;
     }
 }
