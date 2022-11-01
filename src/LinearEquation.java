@@ -9,6 +9,7 @@ public class LinearEquation {
         this.y1 = y1;
         this.x2 = x2;
         this.y2 = y2;
+        //creates an instance of the class
     }
 
     public double distance(){
@@ -16,32 +17,35 @@ public class LinearEquation {
         double yDistance = Math.abs(y1-y2);
         double unRounded = Math.sqrt(Math.pow(xDistance, 2.0) + Math.pow(yDistance, 2.0));
         return roundedToHundredth(unRounded);
+        //uses the pythagorean theorem to calculate the distance between two points rounded to the nearest hundredth
     }
 
     public double yIntercept(){
-
         return y1-(slope()*x1);
+        //algebraically finds the y-intercept using a set of provided coordinates
     }
 
     public double slope(){
         double yDifference = y2 - y1;
         double xDifference = x2 - x1;
         return roundedToHundredth(yDifference/xDifference);
+        //calculates slope by yChange over xChange
     }
 
     public String equation(){
         String slope = "";
         String yInt;
+        //creates strings for slope and y-int to make sense of double negatives and negative exceptions
 
         int yDifference = y2 - y1;
         int xDifference = x2 - x1;
-        if (slope()*10%10==0){
+        if (slope()*10%10==0){ //checks if slope is a whole number
             if(slope()==1.0){
-                slope += "";
+                slope += "";//if slope is 1, no coefficient is needed for x
             } else if (slope() == -1.0){
-                slope += "-";
+                slope += "-";//if slope is -1, only thing needed before x is negative symbol
             } else {
-                slope += (int)(slope());
+                slope += (int)(slope()); //if x is a whole number but not 1 or -1, just use the int value
             }
         } else {
             if(yDifference <0 && xDifference>0){
