@@ -1,4 +1,6 @@
 public class LinearEquation {
+
+    //instance variables
     private int x1;
     private int y1;
     private int x2;
@@ -47,7 +49,7 @@ public class LinearEquation {
             } else {
                 slope += (int)(slope()); //if x is a whole number but not 1 or -1, just use the int value
             }
-        } else {
+        } else { //makes sure negative sign is always in front of the first number is slope is negative.
             if(yDifference <0 && xDifference>0){
                 slope += yDifference + "/" + xDifference;
             } else if (yDifference>0 && xDifference>0){
@@ -57,37 +59,37 @@ public class LinearEquation {
             } else if (yDifference<0 && xDifference<0){
                 slope += Math.abs(yDifference) + "/" + Math.abs(xDifference);
             } else {
-                return "";
+                return ""; //if slope is zero -> string is empty
             }
         }
 
-        if (yIntercept() <0){
+        if (yIntercept() <0){ //prevents double negative signs and double positive signs.
             yInt = "- " + Math.abs(yIntercept());
         } else if(yIntercept()>0){
             yInt = "+ " + Math.abs(yIntercept());
         } else{
-            yInt = "";
+            yInt = ""; // if y intercept is zero then string is blank.
         }
 
         if (slope() == 0) {
             if(yInt == ""){
-                return "y = 0";
+                return "y = 0"; //test case for horizontal line at the x-axis
             } else {
-                if (yIntercept()*10%10 == 0){
+                if (yIntercept()*10%10 == 0){ //checks and converts whole number y intercepts
                     return "y = " + (int)(yIntercept());
                 } else {
                     return "y = " + yIntercept();
                 }
             }
         } else {
-            return "y = " + slope + "x " + yInt;
+            return "y = " + slope + "x " + yInt; //returns final equation
         }
     }
 
 
     public double roundedToHundredth(double toRound){
         return Math.round(toRound*100)/100.0;
-    }
+    }//round method
 
     public String lineInfo(){
         String output = "";
@@ -106,7 +108,7 @@ public class LinearEquation {
         String out = "";
         out += "(" + xVal + ", ";
         slope = slope();
-        yVal = (slope * xVal) + yIntercept();
+        yVal = (slope * xVal) + yIntercept(); //calculates y value for given x value
         out += roundedToHundredth(yVal) + ")";
         return out;
     }
